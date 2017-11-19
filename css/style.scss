@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"Hiragino Kaku Gothic ProN",
+YuGothic,
+"メイリオ",
+Verdana,
+Meiryo,
+sans-serif;
+// colors
+$baseColor: #1a1a1a;
+$subColor: rgba(154, 152, 152, 0.39);
+$keyColor: rgba(250, 165, 29, 0.87);
+$fontColor: #eae7e7;
+
+/* Base
+------------------------------------------------------------*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $fontColor;
+    font-size: 1.4rem;
+    font-family: $baseFontFamily;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    background-color: $baseColor;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+a {
+    @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* Align
+------------------------------------------------------------*/
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Layout
+------------------------------------------------------------*/
+
+.block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* key
+------------------------------------------------------------*/
+
+.keyvisual {
+    height: 500px;
+    background-size: cover;
+    background-image: url(/images/main.jpg);
+    h1 {
+        color: #fff;
+        position: relative;
+        font-size: 5.5rem;
+        top: 200px;
+        left: 60%;
+        font-weight: bold;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+    .keyvisual {
+        height: 250px;
+        h1 {
+            position: relative;
+            font-size: 3.5rem;
+            top: 100px;
+            left: 20%;
+        }
+    }
+}
+
+
+/* Contents
+------------------------------------------------------------*/
+
+//box
+@mixin box($color: #43a5c3) {
+    width: 30%;
+    height: 50px;
+    margin: 10px 2%;
+    background-color: $subColor;
+    display: inline-block;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.contents {
+    margin: 10px 0;
+    padding: 20px 0;
+    background-image: url(/images/contents.jpg);
+    background-size: cover;
+    .column {
+        width: 88%;
+        margin: 0 auto;
+        font-size: 0;
+        min-height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 30px;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+    .box {
+        @include box;
+        h3 {
+            font-size: 3rem;
+            text-align: center;
+        }
+        p {
+            padding: 10px 5px;
+            font-size: 1.5rem;
+            display: block;
+            background-color: $subColor;
+        }
+    }
+}
+
+
+/* Footer
+------------------------------------------------------------*/
+
+@mixin button($color: #f9fbfc) {
+    width: 30%;
+    padding: 10px;
+    background-color: $keyColor;
+    color: $fontColor;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 1px;
+    box-shadow: 0 3px rgba(147, 111, 52, 0.74);
+    &:hover {
+        opacity: 0.9;
+        box-shadow: none;
+        position: relative;
+        top: 1px;
+    }
+    @media(max-width:768px) {
+        width: 85%;
+        &:hover {
+            opacity: 1;
+            box-shadow: 0 3px rgba(0, 0, 0, 0.5);
+            position: relative;
+            top: 0;
+        }
+    }
+}
+
+footer {
+    margin: 10px 1%;
+    padding: 20px 0;
+    background-color: $baseColor;
+    text-align: center;
+    .button {
+        @include button;
+    }
+}

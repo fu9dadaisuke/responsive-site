@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+/* line 20, style.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 24, style.scss */
+body {
+  color: #eae7e7;
+  font-size: 1.4rem;
+  font-family: "Hiragino Kaku Gothic ProN", YuGothic, "メイリオ", Verdana, Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #1a1a1a;
+  width: 100%; }
+
+/* line 34, style.scss */
+a {
+  color: rgba(250, 165, 29, 0.87);
+  text-decoration: none; }
+  /* line 18, ../../../../../Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+  a:visited {
+    color: rgba(223, 139, 5, 0.87); }
+  /* line 24, ../../../../../Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+  a:hover {
+    color: rgba(223, 139, 5, 0.87); }
+  /* line 27, ../../../../../Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+  a:active {
+    color: rgba(251, 175, 54, 0.87); }
+  /* line 37, style.scss */
+  a:hover {
+    text-decoration: underline; }
+
+/* line 42, style.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+/* line 48, style.scss */
+h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 0 2px rgba(172, 172, 172, 0.42);
+  margin: 10px; }
+
+/* Layout
+------------------------------------------------------------*/
+/* line 60, style.scss */
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* key
+------------------------------------------------------------*/
+/* line 70, style.scss */
+.keyvisual {
+  height: 500px;
+  background-size: cover;
+  background-image: url(../images/main.jpg);
+  position: relative; }
+  /* line 75, style.scss */
+  .keyvisual h1 {
+    color: #f0efef;
+    text-shadow: 0 2px rgba(172, 172, 172, 0.42);
+    position: absolute;
+    font-size: 4.5rem;
+    top: 180px;
+    left: 50%;
+    font-weight: bold; }
+
+@media (max-width: 768px) {
+  /* line 87, style.scss */
+  .keyvisual {
+    height: 250px; }
+    /* line 89, style.scss */
+    .keyvisual h1 {
+      position: absolute;
+      font-size: 3rem;
+      top: 50px;
+      left: 50%; } }
+/* Contents
+------------------------------------------------------------*/
+/* line 114, style.scss */
+.contents {
+  margin: 10px 0;
+  padding: 20px 0;
+  background-image: url(../images/contents.jpg);
+  background-size: cover; }
+  /* line 119, style.scss */
+  .contents .column {
+    width: 88%;
+    margin: 0 auto;
+    font-size: 0;
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 30px; }
+    @media (max-width: 768px) {
+      /* line 119, style.scss */
+      .contents .column {
+        display: block; } }
+  /* line 133, style.scss */
+  .contents .box {
+    width: 30%;
+    margin: 10px 2%;
+    background-color: rgba(154, 152, 152, 0.39);
+    display: inline-block; }
+    @media (max-width: 768px) {
+      /* line 133, style.scss */
+      .contents .box {
+        width: 100%;
+        margin: 10px 0; } }
+    /* line 135, style.scss */
+    .contents .box h3 {
+      font-size: 3rem;
+      text-align: center; }
+    /* line 139, style.scss */
+    .contents .box p {
+      padding: 10px 5px;
+      font-size: 1.5rem; }
+
+/* Footer
+------------------------------------------------------------*/
+/* line 178, style.scss */
+footer {
+  margin-bottom: 30px;
+  background-color: #1a1a1a;
+  text-align: center; }
+  /* line 182, style.scss */
+  footer .button {
+    width: 30%;
+    padding: 10px;
+    background-color: rgba(250, 165, 29, 0.87);
+    color: #eae7e7;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 1px;
+    box-shadow: 0 3px rgba(147, 111, 52, 0.74); }
+    /* line 161, style.scss */
+    footer .button:hover {
+      opacity: 0.9;
+      box-shadow: none;
+      position: relative;
+      top: 1px; }
+    @media (max-width: 768px) {
+      /* line 182, style.scss */
+      footer .button {
+        width: 85%; }
+        /* line 169, style.scss */
+        footer .button:hover {
+          opacity: 1;
+          box-shadow: 0 3px rgba(0, 0, 0, 0.5);
+          position: relative;
+          top: 0; } }
